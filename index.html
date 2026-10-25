@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soul Stryde Life Coaching | Certified Life Coach for Every Stage</title>
+<meta name="description" content="Soul Stryde Life Coaching with Alicia, a certified life coach. One-on-one, teen and kids, performance, business team, accountability, and online coaching. Book a free 20 minute call.">
+<meta name="author" content="Soul Stryde Life Coaching">
+<meta property="og:title" content="Soul Stryde Life Coaching">
+<meta property="og:description" content="Certified life coaching for every stage of life. Vision. Goals. Accountability. Book a free 20 minute consultation.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EF;
+    --sand:#F4EADD;
+    --sand-deep:#EADBC7;
+    --ink:#2E2A26;
+    --muted:#6E6358;
+    --clay:#C06A45;
+    --clay-dark:#A2502F;
+    --sage:#6E7F5B;
+    --sage-dark:#566444;
+    --gold:#D6A345;
+    --white:#FFFFFF;
+    --line:#E7D9C6;
+    --radius:18px;
+    --radius-sm:12px;
+    --shadow-sm:0 6px 18px rgba(46,42,38,0.06);
+    --shadow:0 18px 44px rgba(46,42,38,0.10);
+    --maxw:1140px;
+    --font-head:"Fraunces",Georgia,"Times New Roman",serif;
+    --font-body:"Nunito Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:86px;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-head);font-weight:500;line-height:1.14;margin:0 0 .5em;letter-spacing:.2px;}
+  h2{font-size:clamp(1.8rem,3.6vw,2.7rem);}
+  h3{font-size:1.28rem;font-weight:600;}
+  p{margin:0 0 1rem;}
+  a{color:var(--clay-dark);text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-family:var(--font-body);font-weight:800;font-size:1rem;
+    padding:.92rem 1.55rem;border-radius:999px;border:2px solid transparent;
+    cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,color .2s ease;
+    text-align:center;
+  }
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:0 10px 24px rgba(192,106,69,0.28);}
+  .btn-primary:hover{background:var(--clay-dark);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--sand-deep);}
+  .btn-ghost:hover{border-color:var(--clay);color:var(--clay-dark);transform:translateY(-2px);}
+  .btn-sage{background:var(--sage);color:#fff;box-shadow:0 10px 24px rgba(110,127,91,0.26);}
+  .btn-sage:hover{background:var(--sage-dark);transform:translateY(-2px);}
+
+  /* Header / nav */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,246,239,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px;}
+  .brand{display:flex;align-items:center;gap:.7rem;line-height:1;}
+  .brand .mark{
+    width:40px;height:40px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(circle at 32% 30%,var(--gold),var(--clay) 72%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand .mark svg{width:22px;height:22px;}
+  .brand-text{display:flex;flex-direction:column;}
+  .brand-name{font-family:var(--font-head);font-weight:600;font-size:1.22rem;color:var(--ink);letter-spacing:.3px;}
+  .brand-sub{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .nav-links{display:flex;align-items:center;gap:1.7rem;}
+  .nav-links a{color:var(--ink);font-weight:700;font-size:.97rem;position:relative;}
+  .nav-links a:hover{color:var(--clay-dark);}
+  .nav-cta{display:flex;align-items:center;gap:.8rem;}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 520px at 82% -8%,rgba(214,163,69,0.20),transparent 60%),
+      radial-gradient(900px 600px at 6% 110%,rgba(110,127,91,0.16),transparent 55%),
+      linear-gradient(180deg,var(--cream),var(--sand));
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:76px;padding-bottom:84px;}
+  .eyebrow{
+    display:inline-block;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+    font-size:.72rem;color:var(--clay-dark);background:var(--white);
+    padding:.5rem .9rem;border-radius:999px;box-shadow:var(--shadow-sm);margin-bottom:1.3rem;
+  }
+  .hero h1{font-size:clamp(2.5rem,5.6vw,4rem);margin-bottom:.35em;}
+  .hero h1 em{font-style:italic;color:var(--clay);}
+  .hero .lead{font-size:1.18rem;color:var(--muted);max-width:33ch;margin-bottom:1.8rem;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1.4rem;}
+  .hero-note{font-size:.92rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;}
+  .hero-note svg{width:18px;height:18px;flex:0 0 auto;color:var(--sage);}
+
+  .hero-card{
+    background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:30px;position:relative;
+  }
+  .hero-card .ring{
+    position:absolute;inset:auto 22px 100% auto;transform:translateY(50%);
+    width:64px;height:64px;border-radius:50%;
+    background:radial-gradient(circle at 34% 30%,var(--gold),var(--clay) 72%);
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);
+  }
+  .hero-card .ring svg{width:30px;height:30px;}
+  .hero-card h3{margin-top:14px;font-size:1.22rem;}
+  .pillars{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.75rem;}
+  .pillars li{display:flex;gap:.7rem;align-items:flex-start;font-weight:600;}
+  .pillars svg{width:20px;height:20px;flex:0 0 auto;color:var(--sage);margin-top:3px;}
+
+  /* Section scaffolding */
+  section{padding:84px 0;}
+  .section-head{max-width:62ch;margin-bottom:2.6rem;}
+  .section-head .kicker{font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--sage-dark);display:block;margin-bottom:.7rem;}
+  .section-head p{color:var(--muted);font-size:1.08rem;}
+  .alt{background:var(--sand);}
+  .alt-deep{background:linear-gradient(180deg,var(--sand),var(--sand-deep));}
+
+  /* Values strip */
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .value{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow-sm);
+  }
+  .value .num{font-family:var(--font-head);font-size:1.5rem;color:var(--clay);font-weight:600;}
+  .value h3{margin:.4rem 0 .35rem;font-size:1.12rem;}
+  .value p{margin:0;color:var(--muted);font-size:.98rem;}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;
+    transition:transform .18s ease,box-shadow .2s ease,border-color .2s ease;
+  }
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--sand-deep);}
+  .service .icon{
+    width:52px;height:52px;border-radius:14px;margin-bottom:16px;
+    background:var(--sand);display:flex;align-items:center;justify-content:center;
+  }
+  .service .icon svg{width:26px;height:26px;color:var(--clay-dark);}
+  .service h3{margin-bottom:.5rem;}
+  .service p{color:var(--muted);font-size:.98rem;flex:1 0 auto;}
+  .service .who{
+    margin-top:14px;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--sage-dark);
+  }
+  .service .ask{margin-top:16px;font-weight:800;color:var(--clay-dark);display:inline-flex;align-items:center;gap:.4rem;}
+  .service .ask svg{width:16px;height:16px;transition:transform .15s ease;}
+  .service .ask:hover svg{transform:translateX(3px);}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;}
+  .about-portrait{
+    background:
+      radial-gradient(circle at 30% 26%,rgba(214,163,69,0.5),transparent 55%),
+      linear-gradient(150deg,var(--sage),var(--sage-dark));
+    border-radius:26px;min-height:360px;position:relative;overflow:hidden;
+    box-shadow:var(--shadow);display:flex;align-items:flex-end;padding:28px;
+  }
+  .about-portrait .glyph{position:absolute;top:26px;right:26px;opacity:.9;}
+  .about-portrait .glyph svg{width:62px;height:62px;color:rgba(255,255,255,.85);}
+  .about-portrait .cap{
+    background:rgba(255,255,255,0.92);border-radius:14px;padding:16px 18px;color:var(--ink);
+    box-shadow:var(--shadow-sm);
+  }
+  .about-portrait .cap strong{font-family:var(--font-head);font-weight:600;font-size:1.1rem;display:block;}
+  .about-portrait .cap span{color:var(--muted);font-size:.9rem;}
+  .about-copy p{color:var(--muted);}
+  .about-copy .lead-line{font-family:var(--font-head);font-style:italic;font-size:1.35rem;color:var(--ink);line-height:1.4;margin-bottom:1.1rem;}
+  .about-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem;}
+  .about-tags span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-weight:700;font-size:.86rem;color:var(--sage-dark);}
+
+  /* How it works */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step;}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);position:relative;}
+  .step .badge{
+    width:44px;height:44px;border-radius:50%;background:var(--clay);color:#fff;
+    font-family:var(--font-head);font-weight:600;font-size:1.25rem;
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+  }
+  .step h3{font-size:1.1rem;margin-bottom:.4rem;}
+  .step p{color:var(--muted);margin:0;font-size:.97rem;}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .contact-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);}
+  .contact-card h3{font-size:1.5rem;}
+  .quick{display:grid;gap:14px;margin:22px 0 10px;}
+  .quick a{
+    display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--radius-sm);
+    background:var(--sand);border:1px solid var(--line);color:var(--ink);font-weight:700;
+    transition:background .2s ease,transform .15s ease;
+  }
+  .quick a:hover{background:var(--sand-deep);transform:translateY(-2px);}
+  .quick .ic{width:42px;height:42px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:var(--shadow-sm);}
+  .quick .ic svg{width:21px;height:21px;color:var(--clay-dark);}
+  .quick small{display:block;font-weight:700;color:var(--muted);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
+  .quick b{font-size:1.06rem;}
+
+  form .field{margin-bottom:16px;}
+  form label{display:block;font-weight:700;font-size:.9rem;margin-bottom:.4rem;}
+  form input,form textarea,form select{
+    width:100%;font-family:var(--font-body);font-size:1rem;color:var(--ink);
+    padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);
+    background:var(--cream);transition:border-color .2s ease,box-shadow .2s ease;
+  }
+  form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--clay);box-shadow:0 0 0 4px rgba(192,106,69,0.12);}
+  form textarea{resize:vertical;min-height:120px;}
+  .form-note{font-size:.84rem;color:var(--muted);margin-top:4px;}
+
+  /* Footer */
+  footer{background:var(--ink);color:#EADBC7;padding:58px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  footer .brand-name{color:#fff;}
+  footer .brand-sub{color:#C9B59C;}
+  footer p{color:#C9B59C;}
+  footer h4{font-family:var(--font-head);font-weight:600;color:#fff;font-size:1.05rem;margin:0 0 .9rem;}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.55rem;}
+  footer a{color:#D8C6AE;}
+  footer a:hover{color:#fff;}
+  .foot-tag{font-family:var(--font-head);font-style:italic;color:#fff;font-size:1.15rem;margin:.6rem 0 1rem;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,0.12);margin-top:40px;padding-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:.86rem;color:#B6A389;}
+
+  /* Responsive */
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:54px;padding-bottom:62px;}
+    .values,.services-grid,.steps{grid-template-columns:1fr 1fr;}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:30px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:560px){
+    body{font-size:16px;}
+    section{padding:60px 0;}
+    .wrap{padding:0 18px;}
+    .values,.services-grid,.steps,.foot-grid{grid-template-columns:1fr;}
+    .hero-ctas .btn{width:100%;justify-content:center;}
+    .brand-sub{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Soul Stryde Life Coaching home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17c3-1 4-4 5-7s3-5 6-5"/><path d="M14 5h3v3"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Soul Stryde</span>
+        <span class="brand-sub">Life Coaching</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contact">Book a free call</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Certified life coaching</span>
+        <h1>Stryde forward, <em>from within.</em></h1>
+        <p class="lead">Vision, goals, and real accountability, guided one step at a time with a coach in your corner.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Book a free 20 minute call</a>
+          <a class="btn btn-ghost" href="#services">Explore coaching</a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          For every age and stage, in person and online.
+        </p>
+      </div>
+      <aside class="hero-card" aria-label="What coaching with Soul Stryde looks like">
+        <span class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </span>
+        <h3>A coaching partnership built around you</h3>
+        <ul class="pillars">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> An individualized plan tied to your own values</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Weekly guidance with simple tasks between sessions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Honest accountability so progress does not stall</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> A free 20 minute consultation to start</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="alt" aria-label="The Soul Stryde approach">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Vision. Goals. Accountability.</span>
+        <h2>Coaching that helps you reconnect with your own power</h2>
+        <p>Soul Stryde is about uncovering the hidden barriers that hold you back, setting goals that match your values, and keeping you moving toward them with steady support.</p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <span class="num">01</span>
+          <h3>Vision</h3>
+          <p>Get clear on who you want to be and the life you actually want to live, not the one you drifted into.</p>
+        </div>
+        <div class="value">
+          <span class="num">02</span>
+          <h3>Goals</h3>
+          <p>Turn that vision into concrete, values based goals with a plan shaped around your real life.</p>
+        </div>
+        <div class="value">
+          <span class="num">03</span>
+          <h3>Accountability</h3>
+          <p>Show up each week with tasks to carry out between sessions, so momentum keeps building.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-label="Coaching services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Ways to work together</span>
+        <h2>Coaching for every stage of life</h2>
+        <p>From young children to business professionals, each program brings the same individualized, values based approach. Here is what each one involves.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+          <h3>One on One Life Coaching</h3>
+          <p>Private, individualized sessions focused on your values, your goals, and the hidden barriers getting in the way, with weekly guidance to keep you moving.</p>
+          <span class="who">For adults at any stage</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10v6c0 1 3 3 6 3s6-2 6-3v-6"/></svg></div>
+          <h3>Teen and Kids Coaching Workshops</h3>
+          <p>Life skills and self awareness for children and teens, two things that are not taught in school. A supportive space to build confidence and understand themselves early.</p>
+          <span class="who">For children and teens</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+          <h3>Performance and Fitness Coaching</h3>
+          <p>Coaching that connects mindset with physical goals, so motivation, habits, and accountability pull in the same direction and you follow through on how you want to show up.</p>
+          <span class="who">For goal driven movers</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Business Team Coaching</h3>
+          <p>Coaching for teams and professionals who want clearer goals, better accountability, and a healthier relationship with how they work, bringing the individualized approach into a group.</p>
+          <span class="who">For teams and professionals</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+          <h3>Accountability Coaching</h3>
+          <p>Regular check ins and honest support to keep you focused on the goals that matter, with tasks between sessions so progress does not quietly slip away.</p>
+          <span class="who">For people ready to take action</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg></div>
+          <h3>Online Life Coaching</h3>
+          <p>The same personal coaching, from wherever you are. Video sessions make it easy to keep a consistent rhythm no matter your schedule or city.</p>
+          <span class="who">For clients anywhere</span>
+          <a class="ask" href="#contact">Ask about this <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="alt" aria-label="About Alicia">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-portrait" aria-hidden="true">
+          <div class="glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17c3-1 4-4 5-7s3-5 6-5"/><path d="M14 5h3v3"/></svg>
+          </div>
+          <div class="cap">
+            <strong>Alicia</strong>
+            <span>Certified Life Coach, Soul Stryde</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <span class="kicker" style="font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--sage-dark);display:block;margin-bottom:.7rem;">Meet your coach</span>
+          <p class="lead-line">"I am making it part of my mission to help teens and young adults, and people of every age, reconnect with their inner power."</p>
+          <p>Alicia is a certified life coach, born and raised in Vancouver, BC. Like most people, she has faced her own setbacks, and as a young adult she wished she had a coach to guide her through those years. That experience shapes how she works today.</p>
+          <p>She helps people reconnect with their inner power so they can make conscious choices about who they want to be in this world. Her clients range from young children learning life skills and self awareness, to adults working on purpose, goals, relationships, and self love, to business professionals.</p>
+          <div class="about-tags">
+            <span>Values based goals</span>
+            <span>Weekly guidance</span>
+            <span>All ages</span>
+            <span>In person and online</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" aria-label="How to get started">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Getting started is simple</span>
+        <h2>How your free consultation works</h2>
+        <p>No pressure and no commitment. The first conversation is just about seeing whether coaching is the right fit for you.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="badge">1</div>
+          <h3>Reach out</h3>
+          <p>Call or send a message to book a free 20 minute consultation at a time that suits you.</p>
+        </div>
+        <div class="step">
+          <div class="badge">2</div>
+          <h3>Talk it through</h3>
+          <p>Share what you are working toward and what has been getting in the way. Alicia listens and helps you see the path.</p>
+        </div>
+        <div class="step">
+          <div class="badge">3</div>
+          <h3>Start your stryde</h3>
+          <p>If it feels right, begin a coaching plan built around your values, with weekly guidance and steady accountability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt-deep" aria-label="Contact and booking">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto;">
+        <span class="kicker">Let's talk</span>
+        <h2>Book your free 20 minute consultation</h2>
+        <p style="margin-left:auto;margin-right:auto;">Lead a purposeful life and invest in yourself and your future. Reach out and we will find a time to talk.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Reach Alicia directly</h3>
+          <p style="color:var(--muted);">The quickest way to get started is a quick call or email. Your first 20 minute consultation is free.</p>
+          <div class="quick">
+            <a href="tel:+18888366107">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+              <span><small>Call</small><b>(888) 836 6107</b></span>
+            </a>
+            <a href="mailto:alicia@soulstrydelifecoaching.com?subject=Free%20consultation%20request">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+              <span><small>Email</small><b>alicia@soulstrydelifecoaching.com</b></span>
+            </a>
+          </div>
+          <p style="font-size:.9rem;color:var(--muted);margin:0;">Prefer to write it out first? Use the quick note form and it will open in your email, ready to send.</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Send a quick note</h3>
+          <form action="mailto:alicia@soulstrydelifecoaching.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="First and last name" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="interest">What would you like help with?</label>
+              <select id="interest" name="interest">
+                <option>One on One Life Coaching</option>
+                <option>Teen and Kids Coaching Workshops</option>
+                <option>Performance and Fitness Coaching</option>
+                <option>Business Team Coaching</option>
+                <option>Accountability Coaching</option>
+                <option>Online Life Coaching</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">A little about where you are at</label>
+              <textarea id="message" name="message" placeholder="Share whatever feels useful. There are no wrong answers."></textarea>
+            </div>
+            <button class="btn btn-sage" type="submit" style="width:100%;">Send my note</button>
+            <p class="form-note">This opens your email app with the note ready to send to Alicia.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:6px;">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17c3-1 4-4 5-7s3-5 6-5"/><path d="M14 5h3v3"/></svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Soul Stryde</span>
+            <span class="brand-sub">Life Coaching</span>
+          </span>
+        </a>
+        <p class="foot-tag">Stryde forward, from within.</p>
+        <p>Certified life coaching for every age and stage. Available online, and in person in select cities across Canada and the United States.</p>
+      </div>
+      <div>
+        <h4>Coaching</h4>
+        <ul>
+          <li><a href="#services">One on One Coaching</a></li>
+          <li><a href="#services">Teen and Kids Workshops</a></li>
+          <li><a href="#services">Performance and Fitness</a></li>
+          <li><a href="#services">Business Team Coaching</a></li>
+          <li><a href="#services">Accountability Coaching</a></li>
+          <li><a href="#services">Online Coaching</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+18888366107">(888) 836 6107</a></li>
+          <li><a href="mailto:alicia@soulstrydelifecoaching.com">alicia@soulstrydelifecoaching.com</a></li>
+          <li><a href="#contact">Book a free call</a></li>
+          <li><a href="#about">About Alicia</a></li>
+          <li><a href="#how">How it works</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Soul Stryde Life Coaching. All rights reserved.</span>
+      <span>Vision. Goals. Accountability.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
